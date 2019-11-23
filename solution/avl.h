@@ -112,7 +112,7 @@ protected:
 	TAvlNode *Insert(TAvlNode *node, K k, V v) {
 		if (node == nullptr) {
 			try {
-				node = new TAvlNode(std::move(k), v);//попробуй потом std::move(key)
+				node = new TAvlNode(k, v);//попробуй потом std::move(key)
 			}
 			catch (std::bad_alloc &e) {
 				return nullptr;
